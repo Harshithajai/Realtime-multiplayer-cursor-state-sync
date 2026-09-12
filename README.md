@@ -1,2 +1,33 @@
-# Realtime-multiplayer-cursor-state-sync
-A high-performance real-time collaborative sync engine managing multiplayer cursors &amp; shared application state across distributed clients. Built with Node.js, Socket.IO, &amp; React, featuring sub-50ms latency, versioned optimistic concurrency control, and a scalable Redis Pub/Sub architecture backed by PostgreSQL for state persistence.
+# Real-Time Multiplayer Cursor & State Sync
+
+A job-ready full-stack real-time collaboration platform using React, TypeScript, Node.js, Socket.IO, Redis, and PostgreSQL.
+
+## Quick start
+
+```bash
+npm install
+npm run dev
+```
+
+The frontend runs on `http://localhost:5173` and the API on `http://localhost:4000`.
+
+For Redis/PostgreSQL:
+
+```bash
+docker compose up -d postgres redis
+```
+
+Copy `.env.example` to `.env`.
+
+## Features
+- Room creation/joining
+- Real-time multiplayer cursors
+- Server-authoritative shared state
+- Version-based conflict detection
+- Reconnection and disconnect cleanup
+- Zod validation
+- Rate limiting
+- PostgreSQL persistence
+- Redis-ready event bus
+- Responsive UI
+- Unit tests
