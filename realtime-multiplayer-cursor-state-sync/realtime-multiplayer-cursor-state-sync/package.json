@@ -1,0 +1,13 @@
+{
+  "name": "realtime-multiplayer-cursor-state-sync",
+  "private": true,
+  "workspaces": ["apps/frontend", "apps/backend", "packages/shared"],
+  "scripts": {
+    "dev": "concurrently \"npm run dev -w apps/backend\" \"npm run dev -w apps/frontend\"",
+    "build": "npm run build -w packages/shared && npm run build -w apps/backend && npm run build -w apps/frontend",
+    "test": "npm run test -w apps/backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
